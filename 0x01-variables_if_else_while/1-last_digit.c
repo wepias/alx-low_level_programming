@@ -7,11 +7,11 @@
  *
  *Return: 0
  */
-
 int main(void)
 {
 	int n;
 	int x;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	x = n % 10;

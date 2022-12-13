@@ -5,8 +5,8 @@
  * @c: the character to check
  *
  * Returns:
- *  1 if c is a lowercase letter
- *  0 otherwise
+ * 1 if c is a lowercase letter
+ * 0 otherwise
  */
 
 int _islower(int c)

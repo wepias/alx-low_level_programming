@@ -3,12 +3,12 @@
 /**
  * print_numbers - function that prints numbers from 0 to 9
  * 
- *Return: 0 to 9
+ * Return: 0 to 9
  */
 
 void print_numbers(void)
 {
-	int i;
+	char i;
 
 	for (i = 0; i <= 9; i++)
 	{

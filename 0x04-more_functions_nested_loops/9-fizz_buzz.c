@@ -1,5 +1,12 @@
+#include "main.h)
 #include <stdio.h>
 
+/**
+ * main -  program that prints the numbers from 1 to 100
+ * for multiples of 3 print Fizz
+ * for the multiples of 5 print Buzz
+ * multiples of both three and five print FizzBuzz
+ */
 int main(void)
 {
 	int n = 1;

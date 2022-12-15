@@ -6,7 +6,7 @@
  * for multiples of 3 print Fizz
  * for the multiples of 5 print Buzz
  * multiples of both 3 and 5 print FizzBuzz
- * Return: 0
+ * Return: Always 0
  */
 int main(void)
 {
@@ -28,6 +28,6 @@ int main(void)
 		else
 			printf("%d ", i);
 	}
-	printf("\n");
-	return(0);
+	printf('\n');
+	return (0);
 }

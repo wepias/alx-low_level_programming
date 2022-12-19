@@ -2,7 +2,8 @@
 
 /**
  * _puts - function that prints a string
- *  followed by a new line, to stdout
+ * followed by a new line, to stdout
+ * @str: string to print
  * Returne: 0
  */
 

@@ -2,7 +2,6 @@
 
 /**
  * swap_int - function that swaps the values of two integers
- * @tmp: temporary variable
  * @a: first variable
  * @b: second variable
  */

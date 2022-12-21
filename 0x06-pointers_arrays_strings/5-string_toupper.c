@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * cap_string - function that capitalizes all words of a string
+ * string_toupper - function that changes lowercase letters to uppercase
  * @s: string
  *
  * Return: char
  */
-char *cap_string(char *s)
+char *string_toupper(char *s)
 {
 	int i;
 

@@ -5,6 +5,7 @@
  * @dest: character
  * @src: character
  * @n: byte to be used
+ *
  * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)

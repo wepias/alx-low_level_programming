@@ -16,3 +16,4 @@ int main(void)
     {
         s1[i] = '*';
     }
+}

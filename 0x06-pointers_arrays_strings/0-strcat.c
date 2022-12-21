@@ -4,7 +4,7 @@
  * _strcat - function that appends strings
  * @src: character to be appended
  * @dest: character to append
- * Return: dest
+ * Return: char
  */
 char *_strcat(char *dest, char *src)
 {

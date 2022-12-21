@@ -4,25 +4,24 @@
  * _strncat - function that concatenates two strings
  * @dest: character
  * @src: character
- * @n: byte to be used
  *
- * Return: dest
+ * Return: pointer to the resulting string dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int x = 0;
+	char *x = dest;
 
 	while (*dest != '\0')
 	{
 		dest++;
 	}
-	while (*src != '\0' && x < n)
+	while (*src != '\0' && n > 0)
 	{
 		*dest = *src;
 		dest++;
 		src++;
-		x++;
+		n--;
 	}
 	*dest = '\0';
-	return(dest);
+	return(x);
 }

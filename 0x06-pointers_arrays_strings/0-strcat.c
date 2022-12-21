@@ -2,7 +2,7 @@
 
 /**
  * _strcat - function that appends strings
- * @src: character to append
+ * @src: character to be appended
  * @dest: character to append
  * Return: dest
  */

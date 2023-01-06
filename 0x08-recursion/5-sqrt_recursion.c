@@ -2,7 +2,6 @@
 
 /**
  * _sqrt_recursion - function that returns the natural square root of a number
- * sqrt_recursion - function
  * @n: interger
  * @i: interger
  *
@@ -21,6 +20,12 @@ int _sqrt_recursion(int n, int i)
 	return (_sqrt_recursion(n, i + 1));
 }
 
+/**
+ * sqrt_recursion - function
+ * @n: interger 
+ *
+ * Return: int
+ */
 int sqrt_recursion(int n)
 {
 	if (n < 0)

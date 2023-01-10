@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		char *p = argv[i];
+
 		while (*p)
 		{
 			if (!isdigit(*p))

@@ -25,12 +25,12 @@ char *argstostr(int ac, char **av)
 	}
 
 	concatenated_str = malloc(total_length + ac + 1);
-	if (concatenated_str == NULL) 
+	if (concatenated_str == NULL)
 	{
 		return (NULL);
 	}
 	current_index = 0;
-	for (i = 0; i < ac; i++) 
+	for (i = 0; i < ac; i++)
 	{
 		length = strlen(av[i]);
 		memcpy(concatenated_str + current_index, av[i], length);

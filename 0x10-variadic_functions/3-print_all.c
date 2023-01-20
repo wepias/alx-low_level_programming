@@ -1,52 +1,87 @@
 #include "variadic_functions.h"
-
+#include <stdarg.h>
+#include <stdio.h>
 /**
- * print_all - function that prints anything
- * @format: list of types of arguments passed to the function
+ * tchar - prints variadic argument char
+ * @list: variadic list
  *
- * Return: 0
+ * Return: No return
+ */
+void tchar(va_list list)
+{
+	printf("%c", va_arg(list, int));
+}
+/**
+ * tint - prints variadic argument int
+ * @list: variadic list
+ *
+ * Return: No return
+ */
+void tint(va_list list)
+{
+	printf("%i", va_arg(list, int));
+}
+/**
+ * tfloat - prints variadic argument float
+ * @list: variadic list
+ *
+ * Return: No return
+ */
+void tfloat(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+/**
+ * tstring - prints variadic argument string
+ * @list: variadic list
+ *
+ * Return: No return
+ */
+void tstring(va_list list)
+{
+	char *tmp;
+
+	tmp = va_arg(list, char *);
+	if (tmp == 0)
+		tmp = "(nil)";
+	printf("%s", tmp);
+}
+/**
+ * print_all - prints anything
+ * @format: list of types of arguments passed to the function
+ * @...: Arguments Variadic
+ *
+ * Return: No return
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	char *str;
-	int i;
+	ftype fa[] = {
+		{"c", tchar},
+		{"i", tint},
+		{"f", tfloat},
+		{"s", tstring}
+	};
 
-	va_start(args, format);
-	i = 0;
-	while (format != NULL && format[i] != '\0')
+	int l1 = 0, l2 = 0;
+	va_list list;
+	char *comma = "";
+
+	va_start(list, format);
+	while (format && format[l1])
 	{
-		switch (format[i])
+		l2 = 0;
+		while (l2 < 4)
 		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				break;
-			case 's':
-				str = va_arg(args, char*);
-				if (str== NULL)
-				{
-					printf("(nil)");
-				}
-				else
-				{
-					printf("%s", str);
-				}
-				break;
-			default:
-				break;
+			if (format[l1] == fa[l2].tc[0])
+			{
+				printf("%s", comma);
+				fa[l2].tf(list);
+				comma = ", ";
+			}
+			l2++;
 		}
-		if (format[i])
-		{
-			printf( ", ");
-		}
-		i++;
+		l1++;
 	}
-	va_end(args);
 	printf("\n");
+	va_end(list);
 }
